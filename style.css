@@ -77,6 +77,13 @@ h1 {
   transform: translateY(0);
 }
 
+.comments-section {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
 .contact-section {
   margin-top: 60px;
   width: 100%;
