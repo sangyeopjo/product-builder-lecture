@@ -77,6 +77,70 @@ h1 {
   transform: translateY(0);
 }
 
+.contact-section {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 400px;
+  background: var(--toggle-bg);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  color: var(--title-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  border-color: #444;
+}
+
+#submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--btn-gradient);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+#submit-btn:hover {
+  opacity: 0.9;
+}
+
 #numbers {
   display: flex;
   gap: 15px;
