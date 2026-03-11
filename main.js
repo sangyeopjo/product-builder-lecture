@@ -1,5 +1,26 @@
 const generator = document.getElementById('generator');
 const numbersDiv = document.getElementById('numbers');
+const themeBtn = document.getElementById('theme-btn');
+
+// Theme Logic
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  themeBtn.textContent = '☀️ 라이트 모드';
+}
+
+themeBtn.addEventListener('click', () => {
+  let theme = document.documentElement.getAttribute('data-theme');
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+    themeBtn.textContent = '🌙 다크 모드';
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    themeBtn.textContent = '☀️ 라이트 모드';
+  }
+});
 
 function getColorClass(num) {
   if (num <= 10) return 'n-yellow';
